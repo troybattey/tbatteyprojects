@@ -6,6 +6,10 @@ gem "coderay", "~> 0.9.7"
 gem "i18n", "~> 0.4.2"
 gem "rubytree", "~> 0.5.2", :require => 'tree'
 gem "rdoc", ">= 2.4.2"
+gem 'giternal' 
+gem 'heroku' 
+
+
 
 group :test do
   gem 'shoulda', '~> 2.10.3'
@@ -17,9 +21,9 @@ group :openid do
   gem "ruby-openid", '~> 2.1.4', :require => 'openid'
 end
 
-group :rmagick do
-  gem "rmagick", "~> 1.15.17"
-end
+
+gem "rmagick"
+
 
 # Use the commented pure ruby gems, if you have not the needed prerequisites on
 # board to compile the native ones.  Note, that their use is discouraged, since
@@ -27,26 +31,9 @@ end
 # orders of magnitude compared to their native counterparts. You have been
 # warned.
 #
-platforms :mri do
-  group :mysql do
-    gem "mysql"
-    #   gem "ruby-mysql"
-  end
 
-  group :mysql2 do
-    gem "mysql2", "~> 0.2.7"
-  end
-  
-  group :postgres do
-    gem "pg", "~> 0.9.0"
-    #   gem "postgres-pr"
-  end
-  
-  group :sqlite do
-    gem "sqlite3-ruby", "< 1.3", :require => "sqlite3"
-    #   please tell me, if you are fond of a pure ruby sqlite3 binding
-  end
-end
+gem "pg", "~> 0.9.0"
+
 
 platforms :jruby do
   gem "jruby-openssl"
